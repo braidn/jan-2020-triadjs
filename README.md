@@ -1,13 +1,7 @@
 # TriadJS Jan 2020 Docker Intro Talk
 
-## Building the Site
+[Tiny GraphQL Server Example Repo][tgql]
+[Slides][slide]
 
-```js
-npx rollup --format=cjs --file=bundle.js -- index.mjs
-```
-
-## Building the Docker Image
-
-```shell
-docker build -t someName .
-```
+[tgql]: https://github.com/braidn/jan-2020-triadjs
+[slide]: https://optimistic-sammet-a3dd98.netlify.com/
