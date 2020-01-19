@@ -1,0 +1,222 @@
+import { swiss } from '@mdx-deck/themes'
+import { Notes, Image, Split, Appear, Horizontal, FullScreenCode } from 'mdx-deck'
+import customTheme from './theme'
+
+export const themes = [swiss, customTheme]
+
+# Containerz
+
+## A Whirlwind Story
+
+---
+
+<Horizontal>
+
+![](http://www.quickmeme.com/img/91/91937cf37ba5d6727302ec24851b9a1ff46ae5cdaf1578b7bc7dc2c31a7746b5.jpg)
+
+</Horizontal>
+
+---
+
+<Horizontal>
+
+![](https://media.giphy.com/media/kd9u2ycB5pY5vbgP2x/giphy.gif)
+
+</Horizontal>
+
+---
+
+<Image
+  src='https://www.misswhoeveryouare.com/wp-content/uploads/2017/03/glossier-haul-1440x1021.jpg'
+  style={{
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    color: 'white',
+    backgroundColor: 'black',
+  }}>
+
+# Working on 'Operating Systems' @ Glossier
+
+</Image>
+
+---
+
+<Split>
+
+# What To Expect??
+
+![](https://cdn-images-1.medium.com/max/1600/1*DKfxnzauM-qoGPGPo8rVDg.jpeg)
+
+</Split>
+
+---
+
+<Split>
+
+# How Did We Get Here?
+
+![](https://media.giphy.com/media/7HzOKqjP9MIRa/giphy.gif)
+
+</Split>
+
+<Notes>
+
+The following history will skip the whole Virtual Machine world that VMWare is popular for.
+The following will be a history solely of containerization.
+
+</Notes>
+
+---
+
+# First There Was 2001
+
+---
+
+<Horizontal>
+
+![](https://m.media-amazon.com/images/I/51M7RYGSFZL._SL500_._SCLZZZZZZZ_.jpg)
+
+</Horizontal>
+
+<Notes>
+
+Jacques Gélinas builds the VServer project.
+This was the first time anyone had separated the user space environment on a server into separate units.
+It kickstarted the term 'VPS' or Virtual Private Server.
+Moreover, it made it appear like several servers to all processes.
+
+</Notes>
+
+---
+
+# 2006 Rolls Around
+
+---
+
+<Image
+  src='https://saurabh-deochake.github.io/images/cgroup.png'
+  style={{
+    display: 'flex'
+  }}>
+
+</Image>
+
+<Notes>
+
+Cgroups are born partially out of Red Hat, partially by Paul Menage at Google.
+Cgroups are a collection of memory/cpu/disk io.
+They were revoulitionary because they enforced that each group wouldn't be able to starve resources from another.
+
+So we have the ability to manage resources and the ability to separate space on a server into small units.
+We are close to full containerization.
+
+</Notes>
+
+---
+
+
+<Split>
+
+# 2008 Year Of The Jails
+
+![](https://media.giphy.com/media/rgfmxFKLYFRiU/giphy.gif)
+
+</Split>
+
+<Notes>
+
+Quick aside, if you haven't seen Halt And Catch Fire,
+please set aside some time to watch a wonderful historical perspective of modern computing.
+
+The Linux Conatiner Project or LXC's as it became known is created at IBM.
+LXC's finally brought user tooling to the world of cgroups, specifically around security.
+This was the linchpin that we needed to get to where we are today...
+
+</Notes>
+
+---
+
+# Docker Makes it Big
+
+---
+
+![](https://cdn-images-1.medium.com/max/1600/1*9hGvYE5jegHm1r_97gH-jQ.png)
+
+<Notes>
+
+Docker is officially given to the Open Container Initiative in June 2015 unified disparate solutions into one initiate.
+Docker in itself was _just_ a somewhat improvement over what LXC's introduced years ago.
+Better tooling and easier concepts made it trivial for developers to get containers working for them.
+
+</Notes>
+
+---
+
+<Split>
+
+# Let's Build The Simplest of Apps Powered by Docker!
+
+<FullScreenCode>
+
+```shell
+docker run busybox echo Hello TriadJS
+```
+
+</FullScreenCode>
+
+</Split>
+
+---
+
+<Split>
+
+# Wha Happened?
+
+![](https://media.giphy.com/media/uYgYvxxhCf3e8/giphy.gif)
+
+</Split>
+
+---
+
+1. Docker checked to see if the latest busybox image was available locally
+
+---
+
+1. Docker checked to see if the latest busybox image was available locally
+1. It wasn't so it downloaded it from DockerHub
+
+---
+
+1. Docker checked to see if the latest busybox image was available locally
+1. It wasn't so it downloaded it from DockerHub
+1. After the image was downloaded it started a new container from the image...
+
+---
+
+1. Docker checked to see if the latest busybox image was available locally
+1. It wasn't so it downloaded it from DockerHub
+1. After the image was downloaded it started a new container from the image...
+1. Ran the `echo` command
+
+---
+
+1. Docker checked to see if the latest busybox image was available locally
+1. It wasn't so it downloaded it from DockerHub
+1. After the image was downloaded it started a new container from the image...
+1. Ran the `echo` command
+1. And printed the result to the terminal (STDOUT)
+
+---
+
+<Split>
+
+# Let's Build Something More Complex!
+
+![](https://media.giphy.com/media/2xO491sY6f0cM/giphy.gif)
+
+</Split>
+
+---
+
+# Fin

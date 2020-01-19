@@ -1,0 +1,20 @@
+{
+  "name": "solidusconf-2019",
+  "version": "1.0.0",
+  "description": "",
+  "repository": "https://github.com/braidn/solidusconf-2019",
+  "scripts": {
+    "start": "mdx-deck deck.mdx",
+    "build": "mdx-deck build deck.mdx"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "mdx-deck": "^3.0.13"
+  },
+  "dependencies": {
+    "eslint-plugin-flowtype": "^2.50.3",
+    "react-helmet": "^5.2.1",
+    "typescript": "^3.6.3"
+  }
+}
