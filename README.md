@@ -3,5 +3,5 @@
 - [Tiny GraphQL Server Example Repo][tgql]
 - [Slides][slide]
 
-[tgql]: https://github.com/braidn/jan-2020-triadjs
+[tgql]: https://github.com/braidn/tiny-graphql
 [slide]: https://optimistic-sammet-a3dd98.netlify.com/
